@@ -1,4 +1,10 @@
-# Identity System with Azure SQL and Azure Web Apps
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=azure,react,nodejs,js,terraform,vscode" />
+  </a>
+</p>
+
+<h1 align="center">Identity System with Azure SQL and Azure Web Apps</h1>
 
 ## Introduction
 
