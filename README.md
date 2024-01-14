@@ -1,4 +1,10 @@
-# Identity System with Azure SQL and Azure Web Apps
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=azure,react,nodejs,js,terraform,vscode" />
+  </a>
+</p>
+
+<h1 align="center">Identity System with Azure SQL and Azure Web Apps</h1>
 
 ## Introduction
 
@@ -40,6 +46,12 @@ In addition to Azure Web Apps, Azure App Service encompasses other offerings lik
 ## Conclusion
 
 This Identity System project demonstrates a seamless integration of modern web technologies with Azure's cloud services. It showcases how Azure SQL and Azure Web Apps can be utilized to build and deploy a secure and scalable user authentication system, complete with a front-end user interface and a back-end API service.
+## Instructions
+**Follow the Blog for Detailed Instructions**: For step-by-step guidance, visit [Custom Identity Database with Azure SQL and Web Apps](https://www.cloudblogger.eu/2023/12/11/custom-identity-database-with-azure-sql-and-web-apps/).
+
+## Contribution
+
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository, make your changes, and submit a pull request.
 
 ## Instructions
 **Follow the Blog for Detailed Instructions**: For step-by-step guidance, visit [Custom Identity Database with Azure SQL and Web Apps](https://www.cloudblogger.eu/2023/12/11/custom-identity-database-with-azure-sql-and-web-apps/).
