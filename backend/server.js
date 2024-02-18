@@ -9,6 +9,7 @@ import getStream from 'into-stream';
 import cors from 'cors';
 import { SecretClient } from "@azure/keyvault-secrets";
 import { DefaultAzureCredential } from "@azure/identity";
+import rateLimit from 'express-rate-limit'; // Import rateLimit
 
 dotenv.config();
 
@@ -20,6 +21,16 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
+
+// Set up rate limiter: maximum of 100 requests per 15 minutes
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
+});
+
+// Apply the rate limiter to all requests
+app.use(limiter);
+
 
 const vaultName = process.env.AZURE_KEY_VAULT_NAME;
 const vaultUrl = `https://${vaultName}.vault.azure.net`;
