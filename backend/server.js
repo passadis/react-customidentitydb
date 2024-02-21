@@ -24,13 +24,12 @@ app.use(express.json());
 
 // Set up rate limiter: maximum of 100 requests per 15 minutes
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100 // limit each IP to 100 requests per windowMs
-});
-
-// Apply the rate limiter to all requests
-app.use(limiter);
-
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100 // limit each IP to 100 requests per windowMs
+  });
+  
+  // Apply the rate limiter to all requests
+  app.use(limiter);
 
 const vaultName = process.env.AZURE_KEY_VAULT_NAME;
 const vaultUrl = `https://${vaultName}.vault.azure.net`;
@@ -191,6 +190,47 @@ app.get('/user/:UserId', async (req, res) => {
     }
 });
 
+app.post('/query-openai', async (req, res) => {
+    const query = req.body.query;
+    
+    // Initialize OpenAI with your API key
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY
+    });
+  
+    try {
+      const response = await openai.chat.completions.create({
+        model: "gpt-4",
+        messages: [
+          {
+            role: "system",
+            content: "You are a helpful assistant that can transform natural language to SQL queries."
+          },
+          {
+            role: "user",
+            content: query
+          }
+        ],
+        temperature: 0.7,
+        max_tokens: 64,
+        top_p: 1,
+      });
+  
+      // Send the response back to the frontend
+      const aiResponse = response.data.choices[0]?.message?.content.trim();
+      res.json({ aiResponse });
+    } catch (error) {
+      console.error('Error processing OpenAI query:', error);
+      res.status(500).send('Error processing your request.');
+    }
+  });
+
+
+
+
+
+
 initializeApp().catch(error => {
     console.error("Error initializing application:", error);
 });
+
