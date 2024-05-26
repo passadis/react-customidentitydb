@@ -41,8 +41,8 @@ In addition to Azure Web Apps, Azure App Service encompasses other offerings lik
 - Secure backend API for handling authentication processes.
 - Docker containerization for consistent deployment and scalability.
 - Integration with Azure services for robust and reliable application performance.
-## TODO
-   Add Azure Maps in the Dashboard for Travel instructions
+- Chat GPT Interface that answers ony SQL Related Questions
+
 ## Conclusion
 
 This Identity System project demonstrates a seamless integration of modern web technologies with Azure's cloud services. It showcases how Azure SQL and Azure Web Apps can be utilized to build and deploy a secure and scalable user authentication system, complete with a front-end user interface and a back-end API service.
