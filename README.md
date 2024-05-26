@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Identity System with Azure SQL and Azure Web Apps</h1>
+<h1 align="center">Identity System with Azure SQL and Azure Web Apps plus ChatGPT Dashboard</h1>
 
 ## Introduction
 
@@ -20,7 +20,7 @@ In addition to Azure Web Apps, Azure App Service encompasses other offerings lik
 
 - **React Web Application**: The frontend of our identity system is a user-friendly React web application. It includes:
   - **Sign Up and Sign In Features**: Allows users to register and log into the system, providing a seamless authentication experience.
-  - **User Dashboard**: After logging in, users access a dashboard.
+  - **User Dashboard**: After logging in, users access a dashboard, where they can ask SQL related queries to OpenAI.
 
 ### Backend
 
@@ -41,7 +41,7 @@ In addition to Azure Web Apps, Azure App Service encompasses other offerings lik
 - Secure backend API for handling authentication processes.
 - Docker containerization for consistent deployment and scalability.
 - Integration with Azure services for robust and reliable application performance.
-- Chat GPT Interface that answers ony SQL Related Questions
+- Chat GPT Interface that answers only SQL Related Questions
 
 ## Conclusion
 
