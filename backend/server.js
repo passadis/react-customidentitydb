@@ -226,10 +226,6 @@ app.post('/query-openai', async (req, res) => {
   });
 
 
-
-
-
-
 initializeApp().catch(error => {
     console.error("Error initializing application:", error);
 });
