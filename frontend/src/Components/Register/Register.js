@@ -14,7 +14,6 @@ function Register() {
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
   const photoInputRef = useRef(null);
-  const backendUrl = process.env.REACT_APP_BACKEND_URL
 
   const handleRegistration = async (e) => {
     e.preventDefault();
@@ -39,7 +38,7 @@ function Register() {
     };*/
 
     try {
-      const response = await axios.post('${backendUrl}/register', formData, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/register`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
